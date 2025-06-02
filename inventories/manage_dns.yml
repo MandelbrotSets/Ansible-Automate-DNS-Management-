@@ -1,0 +1,11 @@
+---
+- name: Manage DNS Records
+  hosts: dns_servers
+  tasks:
+    - name: Add A record
+      command: >
+        nsupdate -k /etc/bind/key.key <<EOF
+        server 192.168.1.10
+        update add web01.example.com 3600 A 192.168.1.100
+        send
+        EOF

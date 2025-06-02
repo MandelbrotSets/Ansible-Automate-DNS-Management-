@@ -1,0 +1,5 @@
+dns_servers:
+  hosts:
+    dns1:
+      ansible_host: 192.168.1.10  # Replace with your DNS server IP
+      ansible_user: admin
